@@ -9,7 +9,6 @@ foreach fb : filebases
     input : fb + '.ly',
     depend_files : fb + '.ily',
 #    command : ['ls', '@INPUT@', '@OUTPUT@'],
-#    command : ['lilypond', '--output=pieces', '@INPUT@'],
-    command : ['lilypond', '@INPUT@'],
+    command : ['lilypond', '--output=pieces', '--include=../../pieces', '@INPUT@'],
     build_by_default : true)
 endforeach
